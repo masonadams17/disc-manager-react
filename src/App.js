@@ -1,12 +1,19 @@
-import AccountMenu from './components/navBar/navBar';
 import HomePage from './pages/home/homePage';
-function App() {
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from 'react';
+
+const darkTheme = createTheme({
+  palette: {
+      mode: 'dark'
+  }
+})
+
+export default function App() {
   return (
-    <div>
-      <HomePage/>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <div><HomePage /></div>
+    </ThemeProvider>
   );
 }
 
-export default App;
   
