@@ -1,12 +1,12 @@
-import './App.css';
-
+import AccountMenu from './components/navBar/navBar';
+import HomePage from './pages/home/homePage';
 function App() {
   return (
     <div>
-      <h1>Hello, world</h1>
-      <h2> It is {new Date().toLocaleTimeString()} in San Antonio, Texas</h2>
+      <HomePage/>
     </div>
   );
 }
 
 export default App;
+  
