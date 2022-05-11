@@ -1,12 +1,19 @@
-import './App.css';
+import HomePage from './pages/home/homePage';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from 'react';
 
-function App() {
+const darkTheme = createTheme({
+  palette: {
+      mode: 'dark'
+  }
+})
+
+export default function App() {
   return (
-    <div>
-      <h1>Hello, world</h1>
-      <h2> It is {new Date().toLocaleTimeString()} in San Antonio, Texas</h2>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <div><HomePage /></div>
+    </ThemeProvider>
   );
 }
 
-export default App;
+  
